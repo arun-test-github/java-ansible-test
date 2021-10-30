@@ -5,11 +5,11 @@
     - name: Install packages
       yum:
         name: "httpd"
-        state: "present"
+        state: "absent"
     - name: Start Apache server
       service:
         name: httpd
-        state: started
+        state: stop
         enabled: True
     - name: Deploy static website
       copy:
